@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Finder</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.1-dev/mapbox-gl-geocoder.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="restaurant_finder-map.html">Restaurant Finder</a></li>
+            <li><a href="cuisine-map.html">Cuisine Thematic Map</a></li>
+            <li><a href="price-map.html">Price Density Map</a></li>
+        </ul>
+    </nav>
+
+    <div class="map-container">
+        <!-- Search Bar -->
+        <div id="geocoder" class="geocoder"></div>
+
+        <!-- Filters -->
+        <div class="controls">
+            <div class="control-group">
+                <label for="cuisine">Cuisine:</label>
+                <select id="cuisine">
+                    <option value="all">All</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="price">Price:</label>
+                <select id="price"><option value="all">All</option></select>
+            </div>
+
+            <div class="control-group">
+                <label for="travel-time">Travel Time (mins):</label>
+                <select id="travel-time">
+                    <option value="all" selected>All</option>
+                    <option value="10">10 min</option>
+                    <option value="20">20 min</option>
+                    <option value="30">30 min</option>
+                </select>
+            </div>
+
+            <button class="apply-button" onclick="updateIsochrone()">Apply Filters</button>
+            <button class="clear-button" onclick="clearSelection()">Clear Selection</button>
+        </div>
+
+        <!-- Side Panel for Restaurant List -->
+        <div class="side-panel">
+            <h2>Restaurants</h2>
+            <ul id="restaurant-list" class="restaurant-list"></ul>
+        </div>
+
+        <!-- Map -->
+        <div id="map"></div>
+    </div>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.1-dev/mapbox-gl-geocoder.min.js"></script>
+    <script src="../js/script-restaurant_finder.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seattle Restaurant Density</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="restaurant_finder-map.html">Restaurant Finder</a></li>
+            <li><a href="cuisine-map.html">Cuisine Thematic Map</a></li>
+            <li><a href="price-map.html">Price Density Map</a></li>
+        </ul>
+    </nav>
+
+    <div id="map"></div>
+
+    <div class="cuisine-controls">
+        <label for="cuisine-select">Select Cuisine:</label>
+        <select id="cuisine-select"></select>
+    </div>
+
+    <div id="legend"></div>
+    <div id="table-container"></div>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <script src="../js/script-cuisine.js"></script>
+</body>
+</html>
