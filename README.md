@@ -35,26 +35,25 @@ Users can navigate and zoom in/out on the map to explore different neighborhoods
     Users can filter restaurants by specific cuisine types. The map dynamically updates to display only the restaurants that match the selected cuisine, making it easy to explore dining options based on food preferences.  
     - **Dropdown Menu**: A **dropdown menu** allows users to select from a variety of cuisines (e.g., Italian, Mexican, Korean).  
     - **Dynamic Updates**: When a cuisine is selected, the map updates to show only the restaurants that match the selected cuisine, and the restaurant list on the side panel is filtered accordingly.  
-
 - #### Price Filter  
     Users can filter restaurants by price range to find dining options that fit their budget.  
     - **Dropdown Menu**: A **dropdown menu** allows users to select from price ranges (e.g., \$, \$\$, \$\$\$, \$\$\$\$).
     - **Dynamic Updates**: When a price range is selected, the map and restaurant list update to display only the restaurants within the selected price range.  
+![Cuisine Filter](img/isochroneFilter.png)
 
 - #### Isochrone Map  
     The webpage features an **isochrone map** that visualizes travel time from a selected location.  
     - **Travel Time Selection**: Users can select a travel time (e.g., 10, 20, or 30 minutes) to see areas that are reachable within that time frame.  
     - **Dynamic Updates**: When a travel time is selected, the map updates to display the isochrone layer, showing the reachable area based on the selected travel time.  
     - **Restaurant Filtering**: Restaurants within the reachable area are highlighted on the map and listed in the side panel.  
+![Isochrone map](img/isochronemap.png)
 
 - #### Restaurant Table (Side Panel)  
     On the right side of the webpage, a **restaurant table** is displayed, providing a list of restaurants that match the selected filters.  
     - **Restaurant Details**: The table includes the following fields for each restaurant:  
         - **Name**: The name of the restaurant.  
         - **Cuisine**: The type of cuisine served.  
-        - **Price Range**: The price range of the restaurant.  
-        - **Distance**: The distance from the selected location.  
-
+![Restaurant Table](img/restaurantTable.png)
 - #### Interactive Map  
     The webpage features an **interactive map** that allows users to explore restaurants in Seattle.  
     - **Zoom and Pan**: Users can zoom in/out and pan across the map to explore different areas.  
@@ -77,7 +76,7 @@ Users can filter restaurants by specific cuisine types. The map dynamically upda
   - Users can navigate and zoom in and out to explore different areas.  
   - Each neighborhood is color-coded based on the density of restaurants for the selected cuisine, with darker colors indicating higher density.  
   - This provides a clear visual representation of where specific cuisines are concentrated.  
-
+![Interactive Choropleth Map](img/interactiveChoroplethMap.png)
 - ### Dynamic Legend  
   - The map includes a **dynamic legend** that explains the color gradient used in the choropleth map.  
   - The legend updates based on the selected cuisine and displays the corresponding restaurant counts.  
@@ -90,6 +89,7 @@ Users can filter restaurants by specific cuisine types. The map dynamically upda
     - **Restaurant Count**: The number of restaurants for the selected cuisine in that neighborhood.  
     - **Percentage of Total**: The percentage of total restaurants for the selected cuisine that are located in that neighborhood.  
   - The table is sorted in descending order by restaurant count, making it easy to identify neighborhoods with the highest density of the selected cuisine.  
+![Restaurant Breakdown Table](img/restaurantBreakdownTable.png)
 
 - ### Hover-Based Popups  
   - When users hover over a neighborhood on the map, a **popup** appears showing:  
@@ -109,6 +109,8 @@ Users can view restaurants within selected price ranges. This feature helps user
     - **Price Density Visualization**: The heatmap uses color gradients to represent the density of restaurants in different price ranges (e.g., \$, \$\$, \$\$\$, \$\$\$\$).
     - **Dynamic Scaling**: The heatmap scales dynamically as users zoom in or out, ensuring that the density visualization remains accurate and visually intuitive at all zoom levels.  
     - **Color Gradient Explanation**: The legend explains the color gradient used in the heatmap, with darker colors indicating higher restaurant density for a specific price range.  
+![Price Density Map](img/priceDensityMap.png)
+
 
 - #### Seattle Neighborhood Boundaries  
     The map includes clearly marked **Seattle neighborhood boundaries**, allowing users to easily identify and explore specific areas.  
@@ -129,7 +131,8 @@ Clicking on a restaurant marker reveals more details about the restaurant, such 
 - **Seattle Restaurants Data**: `seattle_restaurants_final.geojson`
 
 ### Favicon
-![Favicon](assets/favicon.ico)
+![Favicon](img/favicon.png)
+A custom favicon was created using ChatGPT.
 
 ## Applied Libraries and Web Services
 - **Mapbox GL JS**: For rendering interactive maps.
@@ -191,3 +194,9 @@ with open("seattle_restaurants_final.geojson", "w") as f:
 We divided Seattle into neighborhoods using the Seattle Open Data Neighborhood Atlas. The neighborhood map and restaurant data were combined to create the final dataset used in the application.
 
 ## AI Use Disclosure:
+In the development of this project, ChatGPT was utilized to assist with various aspects of the work:  
+- **Code Skeleton and Navbar Tweaks**: AI was used to help build a skeleton of code and refine certain aspects of the navigation bar.  
+- **JavaScript Coding and Debugging**: ChatGPT was employed to assist with writing JavaScript code and debugging issues.  
+- **Yelp Fusion API Integration**: AI was used to work with the Yelp Fusion API to generate and process the GeoJSON file for restaurant data.
+- **Favicon**: A custom favicon was created using ChatGPT.
+
