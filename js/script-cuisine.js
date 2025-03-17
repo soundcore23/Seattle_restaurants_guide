@@ -6,7 +6,7 @@ const cuisines = ["italian", "mexican", "korean", "vietnamese", "greek", "chines
 const cuisineMap = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-122.25167, 47.6205], 
+    center: [-122.26167, 47.6105], 
     zoom: 10.5
 });
 
@@ -73,7 +73,7 @@ function addLayer(cuisine) {
                     maxVal * 0.8, '#d84315',
                     maxVal, '#b71c1c'  
                 ],
-                'fill-opacity': 1
+                'fill-opacity': 0.75
             }
         });
 
