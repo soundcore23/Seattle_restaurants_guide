@@ -190,3 +190,4 @@ with open("seattle_restaurants_final.geojson", "w") as f:
 We divided Seattle into neighborhoods using the Seattle Open Data Neighborhood Atlas. The neighborhood map and restaurant data were combined to create the final dataset used in the application.
 
 ## AI Use Disclosure:
+Developed the initial website structure with assistance from ChatGPT, including debugging and integration of Fusion APIs for enhanced functionality
